@@ -1,6 +1,5 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import { AuroraBackground } from "./components/ui/aurora-background";
 
 const outfit = Outfit({
   subsets: ["latin"], weight: ["400", "500", "600", "700"]
@@ -18,7 +17,7 @@ export default function RootLayout({ children }) {
         className={`${outfit.className} antialiased leading-8 overflow-x-hidden dark:bg-zinc-800
           dark:text-white`}
       >
-        <AuroraBackground>{children}</AuroraBackground>
+        {children}
         
       </body>
     </html>

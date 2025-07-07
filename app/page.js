@@ -7,7 +7,6 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Work from "./components/Work";
-import { SplashCursor } from "@/components/ui/splash-cursor";
 
 
 export default function Home() {
