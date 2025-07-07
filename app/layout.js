@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth dark">
       <body
         className={`${outfit.className} antialiased leading-8 overflow-x-hidden dark:bg-zinc-800
-          dark:text-white`}
+          dark:text-white bg-[url("/footer-bg-color.png")] bg-fixed`}
       >
         {children}
         

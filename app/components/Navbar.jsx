@@ -29,7 +29,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
     <>
         <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white/30 backdrop-blur-lg dark:bg-transparent dark:shadow-white/20" : ""}`}>
             
-            <a href='#top'>
+            <a href='#top' aria-label='back to top'>
                 <Image priority={true} src={isDarkMode ? assets.logo_dark : assets.logo} className='w-28 cursor-pointer lg:mr-26' alt=''/>
             </a>
 
@@ -42,7 +42,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
             </ul>
 
             <div className='flex items-center gap-4'>
-                <button onClick={() => setIsDarkMode(prev => !prev)}>
+                <button aria-label="mode-button" onClick={() => setIsDarkMode(prev => !prev)}>
                     <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='' className='w-6' />
                 </button>
 
@@ -51,26 +51,27 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                 <Image src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon} alt='' className='w-3'/>
                 </a>
 
-                <button className='block md:hidden ml-3' onClick={openMenu}>
+                <button className='block md:hidden ml-3' aria-label='menu-button' onClick={openMenu}>
                     <Image src={isDarkMode ? assets.menu_white : assets.menu_black} alt='' className='w-6' />
                 </button>
             </div>
 
             {/* MOBILE */}
 
-            <ul  ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-zinc-500 dark:text-white'>
+            <div  ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-zinc-500 dark:text-white'>
 
                 <div className='absolute right-6 top-6' onClick={closeMenu}>
                     <Image src={assets.close_black} alt='' className='w-5 cursor-pointer' />
 
                 </div>
-
-                <li><a onClick={closeMenu} href="#top">home</a></li>
-                <li><a onClick={closeMenu} href="#about">about me</a></li>
-                <li><a onClick={closeMenu} href="#services">services</a></li>
-                <li><a onClick={closeMenu} href="#work">my work</a></li>
-                <li><a onClick={closeMenu} href="#contact">contact me</a></li>
-            </ul>
+                <ul>
+                    <li><a onClick={closeMenu} href="#top">home</a></li>
+                    <li><a onClick={closeMenu} href="#about">about me</a></li>
+                    <li><a onClick={closeMenu} href="#services">services</a></li>
+                    <li><a onClick={closeMenu} href="#work">my work</a></li>
+                    <li><a onClick={closeMenu} href="#contact">contact me</a></li>
+                </ul>
+            </div>
         </nav>
   </>
   )
