@@ -18,7 +18,7 @@ import logo_closing_dark from './logo_closing_dark.png';
 import logo_dark from './logo_dark.png';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
-import profile_img from './profile-img.png';
+import profile_img from './profile-img.webp';
 import download_icon from './download-icon.png';
 import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.png';
@@ -86,22 +86,22 @@ export const workData = [
     {
         title: 'frontend',
         description: 'web design',
-        bgImage: '/work-1.png',
+        bgImage: '/work-1.webp',
     },
     {
         title: 'geo based app',
         description: 'mobile app',
-        bgImage: '/work-2.png',
+        bgImage: '/work-2.webp',
     },
     {
         title: 'photography',
         description: 'web design',
-        bgImage: '/work-3.png',
+        bgImage: '/work-3.webp',
     },
     {
         title: 'UI/UX designing',
         description: 'UI/UX design',
-        bgImage: '/work-4.png',
+        bgImage: '/work-4.webp',
     },
 ]
 
