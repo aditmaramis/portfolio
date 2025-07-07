@@ -34,7 +34,6 @@ export default function Home() {
   
   return (
     <>
-      <SplashCursor />
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Header isDarkMode={isDarkMode}/>
       <About isDarkMode={isDarkMode}/>
